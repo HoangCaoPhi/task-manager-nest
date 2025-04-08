@@ -5,8 +5,8 @@ import { User } from './user.entity';
 export class UsersService {
     private users: User[] = [];
 
-    create(username: string, hashedPassword: string): User {
-        const user = {id: Date.now(), username, password: hashedPassword};
+    create(username: string, hashedPassword: string, email: string): User {
+        const user = {id: Date.now(), username, password: hashedPassword, email: email};
         this.users.push(user);
         return user;
     }
